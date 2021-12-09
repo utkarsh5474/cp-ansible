@@ -26,7 +26,7 @@ Please provide the output of the ```-vvv``` switch from Ansible with the failed 
 
 **Environment (please complete the following information):**
  - OS: [e.g. RHEL 7.6]
- - CP-Ansible Branch: [5.5.0-post]
+ - CP-Ansible Branch: [5.5.7-post]
  - Ansible Version [e.g. ansible 2.9.6]
 
 

@@ -36,7 +36,7 @@ echo "Upgrade Zookeeper"
 echo "Upgrade Kafka Brokers"
 (cd ../../ && ansible-playbook -i ~/.cache/molecule/confluent.test/$SCENARIO_NAME/inventory upgrade_kafka_broker.yml -e kafka_broker_upgrade_start_version=$START_UPGRADE_VERSION)
 
-## Upgrade Schema Restiry from 5.5.0 to 6.0.0
+## Upgrade Schema Restiry from 5.5.7 to 6.0.0
 
 echo "Upgrade Schema Registry"
 (cd ../../ && ansible-playbook -i ~/.cache/molecule/confluent.test/$SCENARIO_NAME/inventory upgrade_schema_registry.yml)

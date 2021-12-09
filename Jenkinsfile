@@ -3,7 +3,7 @@
 import static groovy.json.JsonOutput.*
 
 /* These are variables that can be used to test an un-released version of the Confluent Platform that resides at
- * a different HTTPS Endpoint other than `https://packages.confluent.io`. You do not need to specify *any* of them
+ * a different HTTPS Endpoint other than `https://staging-confluent-packages.s3.us-west-2.amazonaws.com`. You do not need to specify *any* of them
  * for normal testing purposes, and are purely here for Confluent Inc's usage only.
  */
 
@@ -16,7 +16,7 @@ def confluent_package_version = string(name: 'CONFLUENT_PACKAGE_VERSION',
 // The HTTP(S) endpoint from which to obtain the platform packages
 def confluent_common_repository_baseurl = string(name: 'CONFLUENT_PACKAGE_BASEURL',
     defaultValue: '',
-    description: 'Packaging Base URL from where to download packages (ie: https://packages.confluent.io)'
+    description: 'Packaging Base URL from where to download packages (ie: https://staging-confluent-packages.s3.us-west-2.amazonaws.com)'
 )
 
 // Confluent's nightly packages use a different version scheme, so this parameter controls the "suffix" value

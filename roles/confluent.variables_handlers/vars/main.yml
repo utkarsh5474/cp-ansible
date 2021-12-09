@@ -68,8 +68,8 @@ kafka_connect:
   systemd_file: /usr/lib/systemd/system/{{kafka_connect_service_name}}.service
   systemd_override: /etc/systemd/system/{{kafka_connect_service_name}}.service.d/override.conf
 
-ksql_service_name: "{{(confluent_package_version is version('5.5.0', '>=')) | ternary('confluent-ksqldb' , 'confluent-ksql')}}"
-ksql_main_package: "{{(confluent_package_version is version('5.5.0', '>=')) | ternary('confluent-ksqldb' , 'confluent-ksql')}}"
+ksql_service_name: "{{(confluent_package_version is version('5.5.7', '>=')) | ternary('confluent-ksqldb' , 'confluent-ksql')}}"
+ksql_main_package: "{{(confluent_package_version is version('5.5.7', '>=')) | ternary('confluent-ksqldb' , 'confluent-ksql')}}"
 ksql_packages:
   - confluent-common
   - confluent-rest-utils
@@ -83,7 +83,7 @@ ksql_packages:
 ksql_default_user: cp-ksql
 ksql_default_group: confluent
 ksql:
-  config_file: "{{(confluent_package_version is version('5.5.0', '>=')) | ternary('/etc/ksqldb/ksql-server.properties' , '/etc/ksql/ksql-server.properties')}}"
+  config_file: "{{(confluent_package_version is version('5.5.7', '>=')) | ternary('/etc/ksqldb/ksql-server.properties' , '/etc/ksql/ksql-server.properties')}}"
   systemd_file: /usr/lib/systemd/system/{{ksql_service_name}}.service
   systemd_override: /etc/systemd/system/{{ksql_service_name}}.service.d/override.conf
 
