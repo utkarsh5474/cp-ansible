@@ -74,7 +74,7 @@ kafka_broker:
     socket.send.buffer.bytes: 102400
     transaction.state.log.min.isr: "{{ [ 2, kafka_broker_default_interal_replication_factor|int ] | min }}"
     transaction.state.log.replication.factor: "{{kafka_broker_default_interal_replication_factor}}"
-    zookeeper.connection.timeout.ms: 18000
+    zookeeper.connection.timeout.ms: 90000
     confluent.license.topic.replication.factor: "{{kafka_broker_default_interal_replication_factor}}"
     confluent.metadata.topic.replication.factor: "{{kafka_broker_default_interal_replication_factor}}"
     confluent.security.event.logger.exporter.kafka.topic.replicas: "{{kafka_broker_default_interal_replication_factor}}"
