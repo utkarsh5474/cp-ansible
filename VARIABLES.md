@@ -2062,7 +2062,7 @@ Default:  ""
 
 Base URL for Confluent's RPM and Debian Package Repositories
 
-Default:  "https://packages.confluent.io"
+Default:  "https://staging-confluent-packages.s3.us-west-2.amazonaws.com"
 
 ***
 

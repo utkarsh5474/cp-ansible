@@ -244,7 +244,7 @@
         file_path: /etc/ksqldb/ksql-server.properties
         property: public.key.path
         expected_value: /var/ssl/private/public.pem
-    # TODO:  KSQL Currently still supports older TLS versions, and as of 6.0.0 does not have way to override to TLS 1.2 or later.
+    # TODO:  KSQL Currently still supports older TLS versions, and as of 6.0.5 does not have way to override to TLS 1.2 or later.
     # Will have to update this in the future when this is corrected.
 
 - name: Verify - control_center
