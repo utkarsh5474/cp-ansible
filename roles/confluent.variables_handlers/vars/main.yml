@@ -1,3 +1,5 @@
+confluent_repo_version: "{{ confluent_package_version | regex_replace('^([0-9])\\.([0-9]*).*', '\\1.\\2') }}"
+
 zookeeper_service_name: confluent-zookeeper
 zookeeper_main_package: "{{ 'confluent-server' if confluent_server_enabled|bool else 'confluent-kafka-2.12'}}"
 zookeeper_packages:
