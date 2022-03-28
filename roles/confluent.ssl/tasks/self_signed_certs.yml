@@ -44,5 +44,9 @@
   shell: |
     cat {{ca_cert_path}} {{cert_path}} > /var/ssl/private/{{service_name}}.chain
 
+- name: Debug5
+  ansible.builtin.debug:
+    var: create_bouncy_castle_keystore
+
 - name: Create Keystore and Truststore from Certs
   include_tasks: create_keystores_from_certs.yml

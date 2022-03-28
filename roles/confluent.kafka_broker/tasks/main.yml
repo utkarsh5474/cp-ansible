@@ -55,6 +55,10 @@
     force: true
   when: installation_method == "archive"
 
+- name: Print return information from the previous task
+  ansible.builtin.debug:
+    var: result
+
 - include_role:
     name: confluent.ssl
   vars:

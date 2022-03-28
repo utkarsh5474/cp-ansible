@@ -13,6 +13,10 @@
   include_tasks: create_keystore_and_truststore.yml
   when: not keystore.stat.exists|bool or not truststore.stat.exists|bool or regenerate_keystore_and_truststore|bool
 
+- name: Debug2
+  ansible.builtin.debug:
+    var: create_bouncy_castle_keystore
+
 - name: Set Truststore and Keystore File Permissions
   file:
     path: "{{item}}"
