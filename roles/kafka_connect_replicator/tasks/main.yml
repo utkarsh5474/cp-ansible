@@ -273,17 +273,17 @@
   tags:
     - filesystem
 
-- name: Create Kafka Connect Replicator Log4j Config
-  template:
-    src: kafka-connect-replicator-log4j.properties.j2
-    dest: "{{kafka_connect_replicator.log4j_file}}"
-    mode: 0640
-    owner: "{{kafka_connect_replicator_user}}"
-    group: "{{kafka_connect_replicator_group}}"
-  when: kafka_connect_replicator_custom_log4j|bool
-  notify: Restart Kafka Connect Replicator
-  tags:
-    - configuration
+# - name: Create Kafka Connect Replicator Log4j Config
+#   template:
+#     src: kafka-connect-replicator-log4j.properties.j2
+#     dest: "{{kafka_connect_replicator.log4j_file}}"
+#     mode: 0640
+#     owner: "{{kafka_connect_replicator_user}}"
+#     group: "{{kafka_connect_replicator_group}}"
+#   when: kafka_connect_replicator_custom_log4j|bool
+#   notify: Restart Kafka Connect Replicator
+#   tags:
+#     - configuration
 
 - name: Create Kafka Connect Replicator Jolokia Config
   template:

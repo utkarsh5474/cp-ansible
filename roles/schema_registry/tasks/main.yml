@@ -184,17 +184,17 @@
   tags:
     - filesystem
 
-- name: Update log4j Config for Log Cleanup
-  include_role:
-    name: common
-    tasks_from: update_log4j.yml
-  vars:
-    log4j_file: "{{schema_registry.log4j_file}}"
-    log4j_max_backup_index: "{{schema_registry_max_log_files}}"
-    log4j_max_file_size: "{{schema_registry_log_file_size}}"
-    log4j_root_logger: "{{schema_registry_log4j_root_logger}}"
-    handler: "restart schema-registry"
-  when: schema_registry_custom_log4j|bool
+# - name: Update log4j Config for Log Cleanup
+#   include_role:
+#     name: common
+#     tasks_from: update_log4j.yml
+#   vars:
+#     log4j_file: "{{schema_registry.log4j_file}}"
+#     log4j_max_backup_index: "{{schema_registry_max_log_files}}"
+#     log4j_max_file_size: "{{schema_registry_log_file_size}}"
+#     log4j_root_logger: "{{schema_registry_log4j_root_logger}}"
+#     handler: "restart schema-registry"
+#   when: schema_registry_custom_log4j|bool
 
 - name: Set Permissions on Log4j Conf
   file:

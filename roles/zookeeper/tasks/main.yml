@@ -216,17 +216,17 @@
   tags:
     - filesystem
 
-- name: Create Zookeeper log4j config
-  template:
-    src: zookeeper_log4j.properties.j2
-    dest: "{{zookeeper.log4j_file}}"
-    mode: 0640
-    owner: "{{zookeeper_user}}"
-    group: "{{zookeeper_group}}"
-  when: zookeeper_custom_log4j|bool
-  notify: restart zookeeper
-  tags:
-    - configuration
+# - name: Create Zookeeper log4j config
+#   template:
+#     src: zookeeper_log4j.properties.j2
+#     dest: "{{zookeeper.log4j_file}}"
+#     mode: 0640
+#     owner: "{{zookeeper_user}}"
+#     group: "{{zookeeper_group}}"
+#   when: zookeeper_custom_log4j|bool
+#   notify: restart zookeeper
+#   tags:
+#     - configuration
 
 - name: Create Zookeeper Jolokia Config
   template:

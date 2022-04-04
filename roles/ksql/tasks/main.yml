@@ -212,17 +212,17 @@
   tags:
     - filesystem
 
-- name: Create Ksql log4j Config
-  template:
-    src: ksql-server_log4j.properties.j2
-    dest: "{{ksql.log4j_file}}"
-    mode: 0640
-    owner: "{{ksql_user}}"
-    group: "{{ksql_group}}"
-  when: ksql_custom_log4j|bool
-  notify: restart ksql
-  tags:
-    - configuration
+# - name: Create Ksql log4j Config
+#   template:
+#     src: ksql-server_log4j.properties.j2
+#     dest: "{{ksql.log4j_file}}"
+#     mode: 0640
+#     owner: "{{ksql_user}}"
+#     group: "{{ksql_group}}"
+#   when: ksql_custom_log4j|bool
+#   notify: restart ksql
+#   tags:
+#     - configuration
 
 - name: Create Ksql Jolokia Config
   template:
