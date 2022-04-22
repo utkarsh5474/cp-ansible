@@ -303,10 +303,10 @@
   with_items: "{{ kafka_connect_replicator_logredactor_logger_specs_list }}"
   when: (kafka_connect_replicator_custom_log4j|bool) and (kafka_connect_replicator_logredactor_enabled|bool)
 
-- name: Restart kafka connect replicator
-  ansible.builtin.debug:
-    msg: Dummy task to restart kafka connect replicator
-  notify: Restart Kafka Connect Replicator
+# - name: Restart kafka connect replicator
+#   ansible.builtin.debug:
+#     msg: Dummy task to restart kafka connect replicator
+#   notify: Restart Kafka Connect Replicator
 
 - name: Create Kafka Connect Replicator Jolokia Config
   template:
