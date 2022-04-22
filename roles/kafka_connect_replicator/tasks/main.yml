@@ -308,6 +308,18 @@
 #     msg: Dummy task to restart kafka connect replicator
 #   notify: Restart Kafka Connect Replicator
 
+- name: Restart Kafka Connect Replicator Service
+  systemd:
+    daemon_reload: true
+    name: "{{kafka_connect_replicator_service_name}}"
+    state: restarted
+  tags:
+    - systemd
+
+- name: Startup Delay
+  wait_for:
+    timeout: "{{ kafka_connect_replicator_health_check_delay }}"
+
 - name: Create Kafka Connect Replicator Jolokia Config
   template:
     src: kafka-connect-replicator-jolokia.properties.j2
