@@ -256,7 +256,8 @@
   when: (control_center_custom_log4j|bool) and (control_center_logredactor_enabled|bool)
 
 - name: Restart control center
-  include_tasks: tasks/restart_and_wait.yml
+  ansible.builtin.debug: "restarting control center"
+  notify: restart control center
 
 - name: Create RocksDB Directory
   file:

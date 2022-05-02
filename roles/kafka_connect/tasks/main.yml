@@ -238,7 +238,8 @@
   when: (kafka_connect_custom_log4j|bool) and (kafka_connect_logredactor_enabled|bool)
 
 - name: Restart kafka connect
-  include_tasks: tasks/restart_and_wait.yml
+  ansible.builtin.debug: "restarting kafka connect"
+  notify: restart connect distributed
 
 - name: Create Kafka Connect Jolokia Config
   template:

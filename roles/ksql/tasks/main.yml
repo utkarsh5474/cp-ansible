@@ -243,7 +243,8 @@
   when: (ksql_custom_log4j|bool) and (ksql_logredactor_enabled|bool)
 
 - name: Restart ksql
-  include_tasks: tasks/restart_and_wait.yml
+  ansible.builtin.debug: "restarting ksql"
+  notify: restart ksql
 
 - name: Create Ksql Jolokia Config
   template:
