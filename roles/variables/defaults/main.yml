@@ -198,6 +198,9 @@ certs_updated: false
 ### Boolean for TLS Encryption option to provide own Host Keystores.
 ssl_provided_keystore_and_truststore: false
 
+### Boolean for TLS Encryption option to provide own Host Keystores, located on the remote host itself.
+ssl_provided_keystore_and_truststore_remote_src: false
+
 ### Full path to host specific keystore on ansible control node. Used with ssl_provided_keystore_and_truststore: true. May set per host, or use inventory_hostname variable eg "/tmp/certs/{{inventory_hostname}}-keystore.jks"
 ssl_keystore_filepath: ""
 
