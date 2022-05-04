@@ -70,7 +70,7 @@
 
     - name: Install OpenSSL and Rsync - RedHat
       tags: certificate_authority
-      yum:
+      dnf:
         name:
           - openssl
           - rsync

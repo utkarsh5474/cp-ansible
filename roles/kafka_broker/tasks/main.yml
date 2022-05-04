@@ -24,7 +24,7 @@
   tags: package
 
 - name: Install the Kafka Broker Packages
-  yum:
+  dnf:
     name: "{{ kafka_broker_packages | product([confluent_package_redhat_suffix]) | map('join') | list }}"
     state: latest
   when:

@@ -10,7 +10,7 @@
   when: ansible_facts.packages['selinux-policy'] is defined
 
 - name: Install LDAP Server Packages
-  yum:
+  dnf:
     name:
       - rsyslog
       - libselinux-python

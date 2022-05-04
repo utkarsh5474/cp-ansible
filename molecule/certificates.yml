@@ -3,7 +3,7 @@
   hosts: zookeeper[0]
   tasks:
     - name: Install OpenSSL Rsync and Java
-      yum:
+      dnf:
         name:
           - openssl
           - rsync

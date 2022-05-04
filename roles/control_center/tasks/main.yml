@@ -24,7 +24,7 @@
   tags: package
 
 - name: Install the Control Center Packages
-  yum:
+  dnf:
     name: "{{ control_center_packages | product([confluent_package_redhat_suffix]) | map('join') | list }}"
     state: latest
   when:

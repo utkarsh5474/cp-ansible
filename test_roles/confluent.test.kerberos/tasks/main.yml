@@ -20,7 +20,7 @@
   loop: "{{ kerberos_principals }}"
 
 - name: Install Rsync
-  yum:
+  dnf:
     name: rsync
 
 - name: Copy Keytabs Back to Ansible Host

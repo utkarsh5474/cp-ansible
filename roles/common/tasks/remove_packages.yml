@@ -41,7 +41,7 @@
     - confluent_packages_removed|length > 0
 
 - name: Remove Confluent Packages - Red Hat
-  yum:
+  dnf:
     name: "{{ confluent_packages_removed }}"
     state: absent
   when:

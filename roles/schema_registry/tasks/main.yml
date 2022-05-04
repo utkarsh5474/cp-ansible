@@ -25,7 +25,7 @@
 
 # Install Packages
 - name: Install the Schema Registry Packages
-  yum:
+  dnf:
     name: "{{ schema_registry_packages | product([confluent_package_redhat_suffix]) | map('join') | list }}"
     state: latest
   when:

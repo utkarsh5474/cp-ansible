@@ -25,7 +25,7 @@
 
 # Install Packages
 - name: Install the Zookeeper Packages
-  yum:
+  dnf:
     name: "{{ zookeeper_packages | product([confluent_package_redhat_suffix]) | map('join') | list }}"
     state: latest
   when:
