@@ -2,7 +2,7 @@
 - name: Get the logger definition to check if redactor added
   ansible.builtin.shell: grep {{ item.logger_name }} {{ log4j_file }}
   register: output
-  failed_when: output.rc == 2
+  failed_when: output.rc > 1
 
 - name: Add redactor in the logger if not already added
   ansible.builtin.replace:
@@ -14,7 +14,7 @@
 - name: Check if the redactor has been configured
   ansible.builtin.shell: grep "log4j.appender.{{ item.redactor_name }}=io.confluent.log4j.redactor.RedactorAppender" {{ log4j_file }}
   register: output
-  failed_when: output.rc == 2
+  failed_when: output.rc > 1
 
 - name: Declaring the redactor configuration if refresh interval not defined
   set_fact:
