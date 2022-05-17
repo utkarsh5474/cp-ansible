@@ -105,3 +105,6 @@ provisioner:
         sasl_protocol: plain
 
         confluent_server_enabled: false
+
+        schema_registry_custom_properties:
+          kafkastore.group.id: schema-registry

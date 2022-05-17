@@ -176,6 +176,9 @@ provisioner:
           ldap.group.member.attribute.pattern: CN=(.*),OU=rbac,DC=example,DC=com
           ldap.user.object.class: account
 
+        schema_registry_custom_properties:
+          kafkastore.group.id: schema-registry
+
       ldap_server:
         ldaps_enabled: false
         ldaps_custom_certs: false
