@@ -14,3 +14,5 @@ skip_list:
   - no-handler
   - no-log-password
   - fqcn-builtins
+
+# just run ansible-lint (from collections, everything will be identified)
