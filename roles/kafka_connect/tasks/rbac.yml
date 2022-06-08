@@ -131,11 +131,6 @@
         },
         "resourcePatterns": [
           {
-            "resourceType":"Group",
-            "name":"{{kafka_connect_final_properties['config.providers.secret.param.secret.registry.group.id']}}",
-            "patternType":"LITERAL"
-          },
-          {
             "resourceType":"Topic",
             "name":"{{kafka_connect_final_properties['config.providers.secret.param.kafkastore.topic']}}",
             "patternType":"LITERAL"
