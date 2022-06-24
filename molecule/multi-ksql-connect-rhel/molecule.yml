@@ -167,8 +167,8 @@ provisioner:
       syslog:
         kafka_connect_group_id: connect-syslog
         # Create Connectors not working w ssl on molecule
-        kafka_connect_ssl_enabled: false
-        kafka_connect_ssl_mutual_auth_enabled: false
+        # kafka_connect_ssl_enabled: false
+        # kafka_connect_ssl_mutual_auth_enabled: false
         kafka_connect_connectors:
           - name: sample-connector-1
             config:
@@ -179,8 +179,8 @@ provisioner:
       elastic:
         kafka_connect_group_id: connect-elastic
         # Create Connectors not working w ssl
-        kafka_connect_ssl_enabled: false
-        kafka_connect_ssl_mutual_auth_enabled: false
+        # kafka_connect_ssl_enabled: false
+        # kafka_connect_ssl_mutual_auth_enabled: false
         kafka_connect_connectors:
           - name: sample-connector-2
             config:
