@@ -10,6 +10,8 @@ Version of Confluent Platform to install
 
 Default:  7.0.6
 
+***
+
 ### ansible_become_localhost
 
 Boolean to specify the become value for localhost, used when dealing with any file present on localhost/controller.
@@ -2100,7 +2102,7 @@ Default:  false
 
 ### rbac_component_additional_system_admins
 
-List of users to be granted system admin Role Bindings across all components
+List of principals to be granted system admin Role Bindings across all components
 
 Default:  []
 
@@ -2108,7 +2110,7 @@ Default:  []
 
 ### kafka_broker_additional_system_admins
 
-List of users to be granted system admin Role Bindings on the Kafka Cluster
+List of principals to be granted system admin Role Bindings on the Kafka Cluster
 
 Default:  "{{rbac_component_additional_system_admins}}"
 
@@ -2116,7 +2118,7 @@ Default:  "{{rbac_component_additional_system_admins}}"
 
 ### schema_registry_additional_system_admins
 
-List of users to be granted system admin Role Bindings on the Schema Registry Cluster
+List of principals to be granted system admin Role Bindings on the Schema Registry Cluster
 
 Default:  "{{rbac_component_additional_system_admins}}"
 
@@ -2124,7 +2126,7 @@ Default:  "{{rbac_component_additional_system_admins}}"
 
 ### ksql_additional_system_admins
 
-List of users to be granted system admin Role Bindings on the ksqlDB Cluster
+List of principals to be granted system admin Role Bindings on the ksqlDB Cluster
 
 Default:  "{{rbac_component_additional_system_admins}}"
 
@@ -2132,7 +2134,7 @@ Default:  "{{rbac_component_additional_system_admins}}"
 
 ### kafka_connect_additional_system_admins
 
-List of users to be granted system admin Role Bindings on the Connect Cluster
+List of principals to be granted system admin Role Bindings on the Connect Cluster
 
 Default:  "{{rbac_component_additional_system_admins}}"
 
@@ -2140,7 +2142,7 @@ Default:  "{{rbac_component_additional_system_admins}}"
 
 ### control_center_additional_system_admins
 
-List of users to be granted system admin Role Bindings on the Control Center Cluster
+List of principals to be granted system admin Role Bindings on the Control Center Cluster
 
 Default:  "{{rbac_component_additional_system_admins}}"
 
