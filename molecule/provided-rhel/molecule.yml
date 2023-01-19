@@ -151,6 +151,7 @@ provisioner:
 
       ${CONTROLLER_HOSTGROUP:-zookeeper}:
         ssl_keystore_alias: "${CONTROLLER_HOSTGROUP:-zookeeper}.{{inventory_hostname}}"
+        zookeeper_export_certs: true
 
       kafka_broker:
         ssl_keystore_alias: "kafka_broker.{{inventory_hostname}}"
